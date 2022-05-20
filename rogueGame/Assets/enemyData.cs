@@ -22,11 +22,8 @@ public class enemyData : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        float temp = Time.time;
-        while (Time.time-temp > 1)
-        {
-            Debug.Log("burh");
-        }
+        player.health -= 5;
+        Debug.Log(player.health);
 
     }
 }
