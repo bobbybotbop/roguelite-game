@@ -20,15 +20,8 @@ public class enemyData : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        float timer = 0;
-        timer += Time.deltaTime;
-
-        while (timer < 3)
-        {
-            Debug.Log("test");
-        }
-
+        Debug.Log("bruh");
     }
 }
