@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class enemyData : MonoBehaviour
 {
+    public int gay = 0;
     public playerData player;
     public bool isAttacking = false;
 
+
+    private void Awake() {
+        Application.targetFrameRate = 60;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +27,12 @@ public class enemyData : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        Debug.Log("bruh");
+        player.takeDamage(5);
+
+        Vector3 difference = (transform.position - other.transform.position);
+        transform.position = transform.position + difference;
+
     }
+
+
 }
