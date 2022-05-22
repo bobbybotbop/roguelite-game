@@ -8,14 +8,16 @@ public class moveScript : MonoBehaviour
     public Transform bush;
     public float speed;
 
-    
 
+    public bool moving = true;
 
     // Update is called once per frame
     void LateUpdate()
     {
-
-        transform.position = Vector3.MoveTowards(transform.position, player.position, speed);
+        if (moving)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.position, speed);
+        }
     }
 
 
