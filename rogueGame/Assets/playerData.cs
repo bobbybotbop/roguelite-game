@@ -7,6 +7,7 @@ public class playerData : MonoBehaviour
     public HealthBar bar;
     public int health = 100;
     public float attackSpeed = 1.5f;
+    private List<weaponClass> weaponsList = new List<weaponClass>();
 
 
     // Start is called before the first frame update

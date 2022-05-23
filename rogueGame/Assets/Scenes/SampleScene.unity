@@ -3148,6 +3148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 446869240}
   health: 100
+  attackSpeed: 1.5
 --- !u!1001 &1903586840
 PrefabInstance:
   m_ObjectHideFlags: 0
