@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class enemyData : MonoBehaviour
 {
-    public int gay = 0;
     public playerData player;
     public bool isAttacking = false;
 
