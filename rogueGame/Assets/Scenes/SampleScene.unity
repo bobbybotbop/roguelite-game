@@ -3040,9 +3040,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1075606031}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce6d77af7d4bff24cb1e6bc65d03410a, type: 3}
+  m_Script: {fileID: 11500000, guid: 14248c5d3b91de345bc2268b10bf5a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
+  coolDown: 10
+  level: 0
+  animator: {fileID: 1075606033}
 --- !u!1 &1096875254
 GameObject:
   m_ObjectHideFlags: 0

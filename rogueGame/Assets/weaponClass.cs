@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class weaponClass : MonoBehaviour
 {
-    private int damage;
-    private int coolDown;
-    private int level;
+    public int damage;
+    public float coolDown;
+    public int level;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,4 +21,9 @@ public class weaponClass : MonoBehaviour
     {
         
     }
+    public void Attack()
+    {
+        animator.SetTrigger("Attacking"); 
+    }
+
 }

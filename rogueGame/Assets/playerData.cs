@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class playerData : MonoBehaviour
 {
-    public swordAnimator sword;
+    public swordWeapon sword;
     public HealthBar bar;
     public int health = 100;
-    public float attackSpeed = 1.5f;
     private List<weaponClass> weaponsList = new List<weaponClass>();
 
 
@@ -15,7 +14,8 @@ public class playerData : MonoBehaviour
     void Start()
     {
         bar.SetMaxHealth(health);
-        InvokeRepeating("test", 0, attackSpeed);
+        InvokeRepeating("test", 0, sword.coolDown);
+        weaponsList.Add(sword);
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class playerData : MonoBehaviour
     public void test()
     {
         Debug.Log("gay");
-        
+        sword.Attack();
     }
 
 }
