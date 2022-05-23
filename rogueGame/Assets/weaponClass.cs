@@ -6,6 +6,7 @@ public class weaponClass : MonoBehaviour
 {
     private int damage;
     private int coolDown;
+    private int level;
 
     // Start is called before the first frame update
     void Start()
