@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerData : MonoBehaviour
 {
+    public swordAnimator sword;
     public HealthBar bar;
     public int health = 100;
     public float attackSpeed = 1.5f;
@@ -31,6 +32,7 @@ public class playerData : MonoBehaviour
     public void test()
     {
         Debug.Log("gay");
+        
     }
 
 }
