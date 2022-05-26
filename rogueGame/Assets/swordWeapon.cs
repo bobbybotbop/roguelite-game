@@ -13,7 +13,7 @@ public class swordWeapon : weaponClass
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
 
     }

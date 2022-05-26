@@ -3044,8 +3044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  coolDown: 10
+  coolDown: 1.5
   level: 0
+  attackSpeed: 0.8
   animator: {fileID: 1075606033}
 --- !u!1 &1096875254
 GameObject:
@@ -3270,7 +3271,6 @@ MonoBehaviour:
   sword: {fileID: 1075606035}
   bar: {fileID: 446869240}
   health: 100
-  attackSpeed: 1.5
 --- !u!1001 &1903586840
 PrefabInstance:
   m_ObjectHideFlags: 0

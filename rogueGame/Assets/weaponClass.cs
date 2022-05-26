@@ -7,8 +7,10 @@ public class weaponClass : MonoBehaviour
     public int damage;
     public float coolDown;
     public int level;
+    public float attackSpeed;
 
     public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,19 @@ public class weaponClass : MonoBehaviour
     {
         
     }
+
+    IEnumerator wait(float f)
+    {
+        yield return new WaitForSeconds(f);
+        animator.SetTrigger("Done");
+
+
+    }
     public void Attack()
     {
-        animator.SetTrigger("Attacking"); 
+        animator.SetTrigger("Attacking");
+        StartCoroutine(wait(attackSpeed));
+
     }
 
 }
