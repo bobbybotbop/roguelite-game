@@ -10,6 +10,7 @@ public class weaponClass : MonoBehaviour
     public float attackSpeed;
 
     public Animator animator;
+    public CircleCollider2D coll;
 
 
     // Start is called before the first frame update
@@ -28,12 +29,14 @@ public class weaponClass : MonoBehaviour
     {
         yield return new WaitForSeconds(f);
         animator.SetTrigger("Done");
+        coll.enabled = false;
 
 
     }
     public void Attack()
     {
         animator.SetTrigger("Attacking");
+        coll.enabled = true;
         StartCoroutine(wait(attackSpeed));
 
     }

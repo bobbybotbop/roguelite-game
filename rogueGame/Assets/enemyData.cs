@@ -5,7 +5,8 @@ using UnityEngine;
 public class enemyData : MonoBehaviour
 {
     public playerData player;
-    public bool isAttacking = false;
+    //public bool isAttacking = false;
+    public int health;
 
 
     private void Awake() {
@@ -26,8 +27,17 @@ public class enemyData : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        player.takeDamage(5);
+        Collider2D otherFix = other;
 
+        Debug.Log(other.transform.position);
+        if (other.gameObject.tag == "Player")
+        {
+            player.takeDamage(5);
+        }
+        if (other.gameObject.tag == "Sword")
+        {
+
+        }
         Vector3 difference = (transform.position - other.transform.position);
         transform.position = transform.position + difference;
 

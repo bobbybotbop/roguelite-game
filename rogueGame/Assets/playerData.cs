@@ -31,7 +31,6 @@ public class playerData : MonoBehaviour
     }
     public void test()
     {
-        Debug.Log("gay");
         sword.Attack();
     }
 
