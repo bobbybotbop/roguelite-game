@@ -5,7 +5,6 @@ using UnityEngine;
 public class swordWeapon : weaponClass
 {
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +12,33 @@ public class swordWeapon : weaponClass
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
+        Flip();
+    }
 
+    private void Flip()
+    {
+        Vector3 scale = transform.localScale;
+        Vector3 pos = transform.localPosition;
+        bool isFlipped = false;
+        if (Input.GetKey(KeyCode.A))
+        {
+            scale.x *= -1;
+            pos.x *= -1;
+            transform.localScale = scale;
+            transform.localPosition = pos;
+            isFlipped = true;
+        }
+        if (Input.GetKey(KeyCode.D) && isFlipped)
+        {
+            scale.x *= -1;
+            pos.x *= -1;
+            transform.localScale = scale;
+            transform.localPosition = pos;
+            isFlipped = false;
+
+        }
     }
 
 }

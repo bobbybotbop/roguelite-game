@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1555738541}
-  isAttacking: 0
+  health: 0
 --- !u!1 &446869237
 GameObject:
   m_ObjectHideFlags: 0
