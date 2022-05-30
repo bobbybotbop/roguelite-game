@@ -40,5 +40,9 @@ public class swordWeapon : weaponClass
 
         }
     }
+    public int getDamage()
+    {
+        return this.damage;
+    }
 
 }

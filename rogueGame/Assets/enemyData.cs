@@ -22,7 +22,10 @@ public class enemyData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -36,7 +39,7 @@ public class enemyData : MonoBehaviour
         }
         if (other.gameObject.tag == "Sword")
         {
-
+            health -= player.sword.getDamage();
         }
         Vector3 difference = (transform.position - other.transform.position);
         transform.position = transform.position + difference;
