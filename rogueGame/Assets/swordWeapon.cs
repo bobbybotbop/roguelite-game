@@ -21,8 +21,8 @@ public class swordWeapon : weaponClass
     {
         Vector3 scale = transform.localScale;
         Vector3 pos = transform.localPosition;
-        bool isFlipped = false;
-        if (Input.GetKey(KeyCode.A))
+        bool isFlipped;
+        if (Input.GetKeyDown(KeyCode.A))
         {
             scale.x *= -1;
             pos.x *= -1;
@@ -30,7 +30,7 @@ public class swordWeapon : weaponClass
             transform.localPosition = pos;
             isFlipped = true;
         }
-        if (Input.GetKey(KeyCode.D) && isFlipped)
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             scale.x *= -1;
             pos.x *= -1;
