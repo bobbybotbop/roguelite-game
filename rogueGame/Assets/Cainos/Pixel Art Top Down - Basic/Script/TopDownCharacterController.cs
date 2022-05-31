@@ -10,7 +10,6 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Animator animator;
 
-        private string direction;
 
         private void Start()
         {
@@ -25,26 +24,26 @@ namespace Cainos.PixelArtTopDown_Basic
             {
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
-                direction = "left";
+
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 dir.x = 1;
                 animator.SetInteger("Direction", 2);
-                direction = "right";
+
             }
 
             if (Input.GetKey(KeyCode.W))
             {
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
-                direction = "up";
+
             }
             else if (Input.GetKey(KeyCode.S))
             {
                 dir.y = -1;
                 animator.SetInteger("Direction", 0);
-                direction = "down";
+
             }
 
             dir.Normalize();

@@ -5,8 +5,8 @@ using UnityEngine;
 public class enemyData : MonoBehaviour
 {
     public playerData player;
-    //public bool isAttacking = false;
     public int health;
+    
 
 
     private void Awake() {
@@ -16,7 +16,7 @@ public class enemyData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerData>();
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class enemyData : MonoBehaviour
     {
         if (health <= 0)
         {
+            player.addKill();
             Destroy(this.gameObject);
         }
     }

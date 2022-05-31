@@ -9,15 +9,17 @@ public class moveScript : MonoBehaviour
     public float speed;
 
 
-    public bool moving = true;
+    void Start ()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        if (moving)
-        {
+
             transform.position = Vector3.MoveTowards(transform.position, player.position, speed);
-        }
+
     }
 
 

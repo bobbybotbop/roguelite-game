@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class playerData : MonoBehaviour
 {
+    public int kills = 0;
     public swordWeapon sword;
     public HealthBar bar;
     public int health = 100;
+    public TextMeshProUGUI ScoreBoard;
+
     private List<weaponClass> weaponsList = new List<weaponClass>();
 
 
@@ -16,6 +21,8 @@ public class playerData : MonoBehaviour
         bar.SetMaxHealth(health);
         InvokeRepeating("test", 0, sword.coolDown);
         weaponsList.Add(sword);
+
+        ScoreBoard.text = kills.ToString();
     }
 
     // Update is called once per frame
@@ -32,6 +39,12 @@ public class playerData : MonoBehaviour
     public void test()
     {
         sword.Attack();
+    }
+
+    public void addKill()
+    {
+        kills++;
+        ScoreBoard.text = kills.ToString();
     }
 
 }

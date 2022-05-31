@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class swordWeapon : weaponClass
 {
+    bool isFlipped;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +22,8 @@ public class swordWeapon : weaponClass
     {
         Vector3 scale = transform.localScale;
         Vector3 pos = transform.localPosition;
-        bool isFlipped;
-        if (Input.GetKeyDown(KeyCode.A))
+
+        if (Input.GetKeyDown(KeyCode.A) && !isFlipped)
         {
             scale.x *= -1;
             pos.x *= -1;
@@ -30,7 +31,7 @@ public class swordWeapon : weaponClass
             transform.localPosition = pos;
             isFlipped = true;
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) && isFlipped)
         {
             scale.x *= -1;
             pos.x *= -1;
