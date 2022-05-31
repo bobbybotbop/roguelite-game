@@ -8,11 +8,15 @@ public class SpawnerData : MonoBehaviour
     public int spawnAmount;
     public GameObject SpawnerType;
 
+    private Vector3 pos;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        pos = transform.localPosition;
         InvokeRepeating("Spawn",0, spawnRate);
+
     }
 
     // Update is called once per frame
@@ -25,7 +29,7 @@ public class SpawnerData : MonoBehaviour
     {
         for (int i = 0; i < spawnAmount; i++)
         {
-            GameObject newEnemy = Instantiate(SpawnerType, new Vector3(Random.Range(-5f, 5), Random.Range(-5f, 5),0), Quaternion.identity);
+            GameObject newEnemy = Instantiate(SpawnerType, new Vector3(Random.Range(pos.x-5, pos.x+5), Random.Range(pos.y-5, pos.y+5),0), Quaternion.identity);
         }
     }
 }
