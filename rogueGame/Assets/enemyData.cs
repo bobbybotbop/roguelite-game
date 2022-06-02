@@ -6,27 +6,35 @@ public class enemyData : MonoBehaviour
 {
     public playerData player;
     public int health;
-    
+    public Animator anim;
+    public BoxCollider2D coll;
+    public moveScript mScript;
 
 
     private void Awake() {
         Application.targetFrameRate = 60;
     }
 
+    public void load()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerData>();
+        anim = this.gameObject.GetComponent<Animator>();
+        coll = this.gameObject.GetComponent<BoxCollider2D>();
+        mScript = this.gameObject.GetComponent<moveScript>();
+        anim.enabled = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<playerData>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            player.addKill();
-            Destroy(this.gameObject);
-        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -42,10 +50,32 @@ public class enemyData : MonoBehaviour
         {
             health -= player.sword.getDamage();
         }
-        Vector3 difference = (transform.position - other.transform.position);
-        transform.position = transform.position + difference;
+        ////////////////
+        if (health <= 0)
+        {
+            player.addKill();
+            StartCoroutine(Danim(.6f));
+        }
+        if (mScript.isAlive)
+        {
+            Vector3 difference = (transform.position - other.transform.position);
+            transform.position = transform.position + difference;
+        }
+
+
+
 
     }
+    IEnumerator Danim(float f)
+    {
+        mScript.isAlive = false;
+        anim.enabled = true;
+        coll.enabled = false;
+        yield return new WaitForSeconds(f);
+        Destroy(this.gameObject);
+        Debug.Log("end");
+    }
+
 
 
 }

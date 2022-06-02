@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class playerData : MonoBehaviour
 {
@@ -35,6 +36,10 @@ public class playerData : MonoBehaviour
     {
         health -= n;
         bar.SetHealth(health);
+        if(health <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
     public void test()
     {

@@ -3020,6 +3020,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700697688}
   m_CullTransparentMesh: 1
+--- !u!1 &795042119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4825126453735488554, guid: 93da88810e04483468e00d8019563034,
+    type: 3}
+  m_PrefabInstance: {fileID: 4825126454011958101}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &795042126
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795042119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e1240bfb94d74dfd85ad66059babb12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &965154536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235,
@@ -3039,7 +3065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
-  spawnAmount: 1
+  spawnAmount: 2
   SpawnerType: {fileID: 4825126453735488554, guid: 93da88810e04483468e00d8019563034,
     type: 3}
 --- !u!1 &1096875254
@@ -3350,7 +3376,7 @@ PrefabInstance:
     - target: {fileID: 4825126453735488554, guid: 93da88810e04483468e00d8019563034,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4825126453735488723, guid: 93da88810e04483468e00d8019563034,
         type: 3}
@@ -3365,12 +3391,12 @@ PrefabInstance:
     - target: {fileID: 4825126453735488735, guid: 93da88810e04483468e00d8019563034,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.39
+      value: 5.62
       objectReference: {fileID: 0}
     - target: {fileID: 4825126453735488735, guid: 93da88810e04483468e00d8019563034,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.32
+      value: -1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4825126453735488735, guid: 93da88810e04483468e00d8019563034,
         type: 3}
