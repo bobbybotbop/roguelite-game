@@ -73,7 +73,6 @@ public class enemyData : MonoBehaviour
         coll.enabled = false;
         yield return new WaitForSeconds(f);
         Destroy(this.gameObject);
-        Debug.Log("end");
     }
 
 

@@ -29,7 +29,11 @@ public class SpawnerData : MonoBehaviour
     {
         for (int i = 0; i < spawnAmount; i++)
         {
-            GameObject newEnemy = Instantiate(SpawnerType, new Vector3(Random.Range(pos.x-5, pos.x+5), Random.Range(pos.y-5, pos.y+5),0), Quaternion.identity);
+  
+            float ranX = Random.Range(pos.x - 5, pos.x + 5);
+            float ranY = Random.Range(pos.y - 5, pos.y + 5);
+
+            GameObject newEnemy = Instantiate(SpawnerType, new Vector3(ranX, ranY,0), Quaternion.identity);
             newEnemy.GetComponent<enemyData>().load();
             newEnemy.GetComponent<moveScript>().load();
         }
