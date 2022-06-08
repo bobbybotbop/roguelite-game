@@ -41,7 +41,6 @@ public class enemyData : MonoBehaviour
     {
         Collider2D otherFix = other;
 
-        Debug.Log(other.transform.position);
         if (other.gameObject.tag == "Player")
         {
             player.takeDamage(5);

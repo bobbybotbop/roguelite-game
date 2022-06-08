@@ -214,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 5055698509961064897, guid: 6d6991dbbdeecb1488bbf78c063d1235,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
         type: 3}
@@ -224,12 +224,12 @@ PrefabInstance:
     - target: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.75
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
         type: 3}
@@ -501,6 +501,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273720612}
   m_CullTransparentMesh: 1
+--- !u!1 &355679480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4939436863258006224, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 763038007583608365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &446869237
 GameObject:
   m_ObjectHideFlags: 0
@@ -3047,6 +3053,7 @@ MonoBehaviour:
   spawnAmount: 1
   SpawnerType: {fileID: 6822758295197930581, guid: 93da88810e04483468e00d8019563034,
     type: 3}
+  pos: {fileID: 0}
 --- !u!1 &1096875254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3339,6 +3346,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 763038007583608365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5628018141353352454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355679480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3aa11b6654de0f4f9866ace7a1c26a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRate: 0.5
+  spawnAmount: 1
+  SpawnerType: {fileID: 6822758295197930581, guid: 93da88810e04483468e00d8019563034,
+    type: 3}
+  pos: {fileID: 355679480}
 --- !u!1001 &6822758294920641322
 PrefabInstance:
   m_ObjectHideFlags: 0
