@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class enemyData : MonoBehaviour
 {
-    public playerData player;
     public int health;
+    public int damage;
+
+    public playerData player;
     public Animator anim;
     public BoxCollider2D coll;
     public moveScript mScript;
+
 
 
     private void Awake() {
@@ -43,7 +46,7 @@ public class enemyData : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            player.takeDamage(5);
+            player.takeDamage(damage);
         }
         if (other.gameObject.tag == "Sword")
         {

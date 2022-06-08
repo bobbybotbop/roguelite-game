@@ -7,6 +7,9 @@ public class SpawnerData : MonoBehaviour
     public float spawnRate;
     public int spawnAmount;
     public GameObject SpawnerType;
+    public GameObject Spawn1; // increasing difficulty
+    public GameObject Spawn2;
+    public GameObject Spawn3;
 
     public GameObject pos;
 
@@ -14,7 +17,7 @@ public class SpawnerData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn",0, spawnRate);
+        InvokeRepeating("Spawn", 0, spawnRate);
 
     }
 
