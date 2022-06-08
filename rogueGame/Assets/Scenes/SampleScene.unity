@@ -3053,9 +3053,7 @@ MonoBehaviour:
   spawnAmount: 1
   SpawnerType: {fileID: 6822758295197930581, guid: 93da88810e04483468e00d8019563034,
     type: 3}
-  Spawn1: {fileID: 0}
-  Spawn2: {fileID: 0}
-  Spawn3: {fileID: 0}
+  allSpawns: []
   pos: {fileID: 0}
 --- !u!1 &1096875254
 GameObject:
@@ -3511,11 +3509,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 1
   spawnAmount: 1
-  SpawnerType: {fileID: 5159127931791918541, guid: 58d6dfa911ac941868058035cb638fb6,
-    type: 3}
-  Spawn1: {fileID: 2453421991378679700, guid: d030471da1cbf449f9225dec83add82d, type: 3}
-  Spawn2: {fileID: 6822758295197930581, guid: 93da88810e04483468e00d8019563034, type: 3}
-  Spawn3: {fileID: 5159127931791918541, guid: 58d6dfa911ac941868058035cb638fb6, type: 3}
+  SpawnerType: {fileID: 0}
+  allSpawns:
+  - {fileID: 2453421991378679700, guid: d030471da1cbf449f9225dec83add82d, type: 3}
+  - {fileID: 6822758295197930581, guid: 93da88810e04483468e00d8019563034, type: 3}
+  - {fileID: 5159127931791918541, guid: 58d6dfa911ac941868058035cb638fb6, type: 3}
   pos: {fileID: 355679480}
 --- !u!1001 &6822758294920641322
 PrefabInstance:
