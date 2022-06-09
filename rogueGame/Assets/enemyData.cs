@@ -52,7 +52,6 @@ public class enemyData : MonoBehaviour
         {
             health -= player.sword.getDamage();
         }
-        ////////////////
         if (health <= 0)
         {
             player.addKill();
