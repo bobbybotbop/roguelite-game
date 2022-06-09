@@ -3055,6 +3055,12 @@ MonoBehaviour:
     type: 3}
   allSpawns: []
   pos: {fileID: 0}
+--- !u!4 &965154543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5055698509961064898, guid: 6d6991dbbdeecb1488bbf78c063d1235,
+    type: 3}
+  m_PrefabInstance: {fileID: 91115661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1096875254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3391,6 +3397,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4939436863877865231, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939436863877865231, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 5370324031343223025, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
         type: 3}
       propertyPath: m_Enabled
@@ -3419,13 +3435,13 @@ PrefabInstance:
     - target: {fileID: 5462844921938698904, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
         type: 3}
       propertyPath: attackSpeed
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5462844921938698904, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
         type: 3}
       propertyPath: rotationCenter
       value: 
-      objectReference: {fileID: 5628018141353352447}
+      objectReference: {fileID: 965154543}
     - target: {fileID: 5945456375272127425, guid: 8e0e7a3a7ce02a143a0421d8b4601fd5,
         type: 3}
       propertyPath: m_LocalScale.x

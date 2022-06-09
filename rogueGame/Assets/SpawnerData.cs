@@ -36,7 +36,6 @@ public class SpawnerData : MonoBehaviour
 
             //random enemy
             randomInt = (int)Random.Range(0, 100);
-            Debug.Log(randomInt);
             /* 0-50 small boi
              51-85 medium
             86-100 big big chungus big chungus*/
