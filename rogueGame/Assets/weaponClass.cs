@@ -39,6 +39,7 @@ public class weaponClass : MonoBehaviour
         coll.enabled = true;
         StartCoroutine(wait(attackSpeed));
 
+
     }
 
 }

@@ -10,33 +10,40 @@ public class chunkRenderer : MonoBehaviour
     public GameObject cam;
     public Vector3 mid;
 
+    public List<GameObject> chunkList = new List<GameObject>();
+
     void Start()
     {
-        mid = cam.transform.position;
+        mid = transform.position;
     }
 
     void LateUpdate()
     {
 
-        // if(cam.transform.position.x + 9 > width-9)
-        // {
-        //     Debug.Log("right");
-        // }
+        if (cam.transform.position.x > mid.x + 9)
+        {
+            Debug.Log("right");
+            mid = new Vector3(mid.x + 18, mid.y, mid.z);
+            Debug.Log(mid);
+        }
 
-        // if(cam.transform.position.x + 9 < width-9)
-        // {
-        //     Debug.Log("right");
-        // }
-
-        // if(cam.transform.position.y + 5 > height-5)
-        // {
-        //     Debug.Log("top");
-        // }
-
-        // if(cam.transform.position.y + 5 < height-5)
-        // {
-        //     Debug.Log("down");
-        // }
-
+        if (cam.transform.position.x < mid.x - 9)
+        {
+            mid = new Vector3(mid.x - 18, mid.y, mid.z);
+            Debug.Log("left");
+            Debug.Log(mid);
+        }
+        if (cam.transform.position.y > mid.y + 5)
+        {
+            mid = new Vector3(mid.x, mid.y + 10, mid.z);
+            Debug.Log("top");
+            Debug.Log(mid);
+        }
+        if (cam.transform.position.y < mid.y - 5)
+        {
+            mid = new Vector3(mid.x, mid.y - 10, mid.z);
+            Debug.Log("bottom");
+            Debug.Log(mid);
+        }
     }
 }

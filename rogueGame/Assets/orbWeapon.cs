@@ -34,7 +34,7 @@ public class orbWeapon : weaponClass
         if (angle >= 360f)
         {
             angle = 0f;
-            wait();
+            
         }
         coll.enabled = true;
 
@@ -45,5 +45,6 @@ public class orbWeapon : weaponClass
     {
         yield return new WaitForSeconds(coolDown);
         Debug.Log("");
+        //GameObject.enabled = false;
     }
 }
