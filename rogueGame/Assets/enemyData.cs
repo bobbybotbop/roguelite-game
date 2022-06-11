@@ -44,13 +44,14 @@ public class enemyData : MonoBehaviour
     {
         Collider2D otherFix = other;
 
+
         if (other.gameObject.tag == "Player")
         {
             player.takeDamage(damage);
         }
-        if (other.gameObject.tag == "Sword")
+        if (other.gameObject.tag == "Weapon")
         {
-            health -= player.sword.getDamage();
+            health -= other.GetComponentInParent<weaponClass>().getDamage();
         }
         if (health <= 0)
         {
@@ -59,10 +60,10 @@ public class enemyData : MonoBehaviour
         }
         if (mScript.isAlive)
         {
-            Vector3 difference = (transform.position - other.transform.position);
+
+            Vector3 difference = transform.position - other.transform.position;
             transform.position = transform.position + difference;
         }
-
 
 
 

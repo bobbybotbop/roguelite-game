@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 763038006080531780}
   m_Layer: 20
   m_Name: sword-1
-  m_TagString: Sword
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4839181515793749753}
   m_Layer: 20
   m_Name: orb
-  m_TagString: Sword
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

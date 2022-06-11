@@ -25,7 +25,7 @@ public class moveScript : MonoBehaviour
     {
         if (isAlive)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speed);
+            transform.position = Vector3.MoveTowards(transform.position, player.position, Time.timeScale * speed);
         }
 
     }

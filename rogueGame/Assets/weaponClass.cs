@@ -41,5 +41,9 @@ public class weaponClass : MonoBehaviour
 
 
     }
+    public int getDamage()
+    {
+        return this.damage;
+    }
 
 }
