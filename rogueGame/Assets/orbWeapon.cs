@@ -11,8 +11,6 @@ public class orbWeapon : weaponClass
     float posX, posY, angle = 0f;
     float rotationSpeed;
 
-    bool isActive = true;
-
     void Start()
     {
 
