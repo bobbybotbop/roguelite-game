@@ -4,7 +4,7 @@ WASD to move
 ESC for menu
 score in the top left
 
-#description:
+# description:
 infinite map with difficulty and stronger monsters every 25 kills
 
 This is a personal project done by Evan Penner and William Chen but William did most of it heehehehe
