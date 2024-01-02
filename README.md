@@ -7,7 +7,7 @@ score in the top left
 # description:
 infinite map with difficulty and stronger monsters every 25 kills
 
-This is a personal project done by Evan Penner and William Chen
+This is a personal project done by William Chen  
 =============================================================
 Concept: bushes randomly spawn and constantly chase you and you have a sword and floating rock which circles around you to defend yourself
 ------------------------------------------------------------------------------------------------------------------------------
