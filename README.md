@@ -1,4 +1,4 @@
-# roguelite-game
+# roguelite-game Github Link: https://github.com/bobbybotbop/roguelite-game/blob/main
 # run the .exe file in DEMO folder to demo the game!!
 WASD to move
 ESC for menu
